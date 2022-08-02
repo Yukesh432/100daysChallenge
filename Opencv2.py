@@ -22,10 +22,12 @@ cv2.imshow('Green channel', g)
 cv2.imshow('Red channel', r)
 
 #To visualize the actual red or green or blue image we use merge function
-zeros= np.zeros(sample_image[0:2], dtype="uint8")
+zeros= np.zeros(sample_image.shape[0:2], dtype="uint8")
+print(zeros)
 #For blue image
 blue_image= cv2.merge([b, zeros, zeros])
 cv2.imshow('red image', blue_image)
+##Similary we can visualize for red and green...
 
 #display the image
 # cv2.imshow('Image', sample_image)
